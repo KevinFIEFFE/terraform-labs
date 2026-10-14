@@ -1,0 +1,20 @@
+# Dossiers et fichiers générés par Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variables pouvant contenir des secrets
+*.tfvars
+*.tfvars.json
+!example.tfvars
+
+# Fichiers d'override locaux
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Plans sauvegardés
+*.tfplan
