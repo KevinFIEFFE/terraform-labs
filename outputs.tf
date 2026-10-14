@@ -1,19 +1,29 @@
 output "vpc_id" {
-  description = "ID of the created VPC"
-  value       = aws_vpc.production.id
+  description = "The ID of the VPC"
+  value       = aws_vpc.main.id
 }
 
-output "subnet_id" {
-  description = "ID of the created subnet"
-  value       = aws_subnet.private.id
+output "public_subnet_a_id" {
+  description = "The ID of public subnet in AZ a"
+  value       = aws_subnet.public_a.id
 }
 
-output "availability_zone" {
-  description = "Availability zone of the subnet"
-  value       = aws_subnet.private.availability_zone
+output "public_subnet_b_id" {
+  description = "The ID of public subnet in AZ b"
+  value       = aws_subnet.public_b.id
 }
 
-output "account_info" {
-  description = "AWS Account Information"
-  value       = "${data.aws_caller_identity.current.account_id} (${data.aws_region.current.name})"
+output "private_subnet_a_id" {
+  description = "The ID of private subnet in AZ a"
+  value       = aws_subnet.private_a.id
+}
+
+output "private_subnet_b_id" {
+  description = "The ID of private subnet in AZ b"
+  value       = aws_subnet.private_b.id
+}
+
+output "security_group_id" {
+  description = "The ID of the security group"
+  value       = aws_security_group.web.id
 }
